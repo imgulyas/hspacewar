@@ -23,6 +23,9 @@ source-repository head
 common common-options
   build-depends:       base ^>= 4.13.0.0
                      , relude
+                     , text
+                     , optics
+                     , gloss
   
   mixins:              base hiding (Prelude)
                      , relude (Relude as Prelude)
@@ -43,6 +46,7 @@ common common-options
     ghc-options:       -Wmissing-deriving-strategies
 
   default-language:    Haskell2010
+  default-extensions:  DerivingStrategies, OverloadedStrings
 
 library
   import:              common-options
